@@ -9,8 +9,7 @@
 #import "NS2048Object.h"
 #import "GameCore.h"
 #import "GameTools.h"
-@interface NS2048Object()
-{
+@interface NS2048Object() {
     int _array[16];
 }
 @end
@@ -104,15 +103,15 @@
     }
 }
 
-- (void)getLine:(int)line toArray:(int *)array {
+- (void)getRow:(int)row toArray:(int *)array {
     for (int i = 0; i < 4; i++) {
-        array[i] = _array[4 * line + i];
+        array[i] = _array[4 * row + i];
     }
 }
 
-- (void)_getLine:(int)line toArray:(int *)array {
+- (void)_getRow:(int)row toArray:(int *)array {
     for (int i = 0; i < 4; i++) {
-        array[3 - i] = _array[4 * line + i];
+        array[3 - i] = _array[4 * row + i];
     }
 }
 
@@ -128,14 +127,14 @@
     }
 }
 
-- (void)writeLine:(int)line byArray:(int *)array {
+- (void)writeRow:(int)row byArray:(int *)array {
     for (int i = 0; i < 4; i++) {
-        _array[4 * line + i] = array[i];
+        _array[4 * row + i] = array[i];
     }
 }
-- (void)_writeLine:(int)line byArray:(int *)array {
+- (void)_writeRow:(int)row byArray:(int *)array {
     for (int i = 0; i < 4; i++) {
-        _array[4 * line + i] = array[3 - i];
+        _array[4 * row + i] = array[3 - i];
     }
 }
 
@@ -154,9 +153,9 @@
     int array[4] = {0};
     BOOL hasChange = NO;
     for (int i = 0; i < 4; i++) {
-        [self getLine:i toArray:array];
-        hasChange = [GameCore arrayToLeft:array] || hasChange;
-        [self writeLine:i byArray:array];
+        [self getRow:i toArray:array];
+        hasChange = [GameCore arrayToDirection:array] || hasChange;
+        [self writeRow:i byArray:array];
     }
     if (hasChange) {
         [self insertNewNumber];
@@ -168,9 +167,9 @@
     int array[4] = {0};
     BOOL hasChange = NO;
     for (int i = 0; i < 4; i++) {
-        [self _getLine:i toArray:array];
-        hasChange = [GameCore arrayToLeft:array] || hasChange;
-        [self _writeLine:i byArray:array];
+        [self _getRow:i toArray:array];
+        hasChange = [GameCore arrayToDirection:array] || hasChange;
+        [self _writeRow:i byArray:array];
     }
     if (hasChange) {
         [self insertNewNumber];
@@ -183,7 +182,7 @@
     BOOL hasChange = NO;
     for (int i = 0; i < 4; i++) {
         [self getCol:i toArray:array];
-        hasChange = [GameCore arrayToLeft:array] || hasChange;
+        hasChange = [GameCore arrayToDirection:array] || hasChange;
         [self writeCol:i byArray:array];
     }
     if (hasChange) {
@@ -197,7 +196,7 @@
     BOOL hasChange = NO;
     for (int i = 0; i < 4; i++) {
         [self _getCol:i toArray:array];
-        hasChange = [GameCore arrayToLeft:array] || hasChange;
+        hasChange = [GameCore arrayToDirection:array] || hasChange;
         [self _writeCol:i byArray:array];
     }
     if (hasChange) {

@@ -14,8 +14,8 @@
 - (instancetype)initButtonTitle:(NSString *)title withFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self setTitle:title forState:0];
-        [self setTitleColor:[GameColor gameButtonTitle] forState:0];
-        [self setBackgroundColor:[GameColor gameButtonBackground]];
+        [self setTitleColor:[GameColor gameNewGameTitle] forState:0];
+        [self setBackgroundColor:[GameColor gameNewGameBackground]];
         self.titleLabel.font = [UIFont systemFontOfSize:18 weight:2];
         self.layer.cornerRadius = 5;
     }

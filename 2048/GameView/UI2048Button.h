@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface UI2048Button : UIButton
+
+/** 配置16个按钮*/
 - (instancetype)initButtonTitle:(NSString *)title withFrame:(CGRect)frame;
+
 @end

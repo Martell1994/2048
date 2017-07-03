@@ -11,8 +11,11 @@
 #import "GameTools.h"
 
 @interface UI2048ScoreView ()
+
 @property (nonatomic, strong) NSMutableArray *scoreArray;
+
 @end
+
 @implementation UI2048ScoreView
 
 - (instancetype)initWithFrame:(CGRect)frame {

@@ -14,10 +14,12 @@
 #import "GameColor.h"
 
 @interface ViewController ()
+
 @property (nonatomic, strong) NSMutableArray *labelArray;
 @property (nonatomic, strong) UI2048View *gameView;
 @property (nonatomic, strong) UI2048ScoreView *scoreView;
-@property (nonatomic,strong) NS2048Object *data;
+@property (nonatomic, strong) NS2048Object *data;
+
 @end
 
 @implementation ViewController
@@ -89,12 +91,11 @@
     [self.scoreView setScoreText:best withIndex:1];
 }
 
-- (void)userSwip:(UISwipeGestureRecognizer *)recognizer{
+- (void)userSwip:(UISwipeGestureRecognizer *)recognizer {
     BOOL gameOver = NO;
     switch (recognizer.direction) {
         case UISwipeGestureRecognizerDirectionLeft:
             gameOver = [self.data toLeft];
-            
             break;
         case UISwipeGestureRecognizerDirectionRight:
             gameOver = [self.data toRight];
@@ -119,8 +120,11 @@
             [alertC addAction:sureAction];
         }
         else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Wdeprecated-declarations"
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"游戏结束" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"返回", nil];
             [alert show];
+#pragma clang diagnostic pop
         }
     }
 }

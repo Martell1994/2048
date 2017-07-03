@@ -10,18 +10,6 @@
 
 @implementation GameTools
 
-+ (NSUInteger)getIndexByLine:(NSUInteger)line andCol:(NSUInteger)col {
-    return line * 4 + col;
-}
-
-+ (NSUInteger)getLineByIndex:(NSUInteger)index {
-    return index / 4;
-}
-
-+ (NSUInteger)getColByIndex:(NSUInteger)index {
-    return index % 4;
-}
-
 + (NSUInteger)getFontSizeByNumber:(NSUInteger)num {
     switch (num) {
         case 0:

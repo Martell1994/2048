@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface UI2048View : UIView
+
+/** 展示游戏区域方框内的数值*/
 - (void)setLabelText:(int)num withIndex:(NSUInteger)index;
+
 @end

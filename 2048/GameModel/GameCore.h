@@ -10,9 +10,10 @@
 
 @interface GameCore : NSObject
 
+/** 计算分数，并返回是否数组变化*/
++ (BOOL)arrayToDirection:(int *)array;
 
-
-+ (BOOL)arrayToLeft:(int *)array;
-
+/** 取下一个和非零数字的下标,数字不存在,则返回-1*/
 + (int)getNextNumber:(int *)array currentIndex:(int)currentIndex;
+
 @end

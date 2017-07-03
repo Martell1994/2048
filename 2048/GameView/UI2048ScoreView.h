@@ -10,5 +10,7 @@
 
 @interface UI2048ScoreView : UIView
 
+/** 配置分数面板 0 - SCORE，1 - BEST*/
 - (void)setScoreText:(NSInteger)score withIndex:(NSUInteger)index;
+
 @end

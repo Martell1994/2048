@@ -22,23 +22,15 @@
     return color(182, 172, 159);
 }
 
-+ (UIColor *)gameRectNumber {
-    return color(253, 255, 254);
-}
-
-+ (UIColor*)gameRectTitle {
-    return color(235, 223, 210);
-}
-
 + (UIColor *)gameSubRectBackground {
     return color(200, 190, 180);
 }
 
-+ (UIColor *)gameButtonBackground {
++ (UIColor *)gameNewGameBackground {
     return color(123, 103, 83);
 }
 
-+ (UIColor *)gameButtonTitle {
++ (UIColor *)gameNewGameTitle {
     return [UIColor whiteColor];
 }
 
@@ -48,10 +40,6 @@
 
 + (UIColor*)gameScoreTitle {
     return color(234, 222, 210);
-}
-
-+ (UIColor *)gameItemBackground {
-    return color(200, 190, 180);
 }
 
 + (UIColor *)gameLabelBackground:(unsigned int)num {

@@ -19,8 +19,7 @@
 @implementation UI2048View
 
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         //设置自己的背景颜色和圆角值
@@ -32,16 +31,16 @@
         CGFloat selfWidth = frame.size.width;
         CGFloat itemWidth = (selfWidth - 5 * 10) / 4;
         //16宫格创建
-        for (int line = 0; line < 4; line++) {
+        for (int row = 0; row < 4; row++) {
             for (int col = 0; col < 4; col++) {
                 //16个背景View
-                UIView *subView0 = [[UIView alloc] initWithFrame:CGRectMake((col + 1) * 10+ col * itemWidth, (line + 1) * 10 + line * itemWidth, itemWidth, itemWidth)];
+                UIView *subView0 = [[UIView alloc] initWithFrame:CGRectMake((col + 1) * 10+ col * itemWidth, (row + 1) * 10 + row * itemWidth, itemWidth, itemWidth)];
                 subView0.backgroundColor = [GameColor gameSubRectBackground];
                 subView0.layer.cornerRadius = 5;
                 subView0.layer.masksToBounds = YES;
                 [self addSubview:subView0];
                 //16个Label
-                UILabel *subLabel = [[UILabel alloc] initWithFrame:CGRectMake((col + 1) * 10 + col * itemWidth, (line + 1) * 10 + line * itemWidth, itemWidth, itemWidth)];
+                UILabel *subLabel = [[UILabel alloc] initWithFrame:CGRectMake((col + 1) * 10 + col * itemWidth, (row + 1) * 10 + row * itemWidth, itemWidth, itemWidth)];
                 subLabel.text = @"2";
                 subLabel.layer.cornerRadius = 5;
                 subLabel.layer.masksToBounds = YES;

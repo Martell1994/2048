@@ -13,13 +13,13 @@
 		551A3DCD1C42642300F60875 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551A3DCB1C42642300F60875 /* Main.storyboard */; };
 		551A3DCF1C42642300F60875 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 551A3DCE1C42642300F60875 /* Assets.xcassets */; };
 		551A3DD21C42642300F60875 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551A3DD01C42642300F60875 /* LaunchScreen.storyboard */; };
-		551A3DDC1C4264FB00F60875 /* GameCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 551A3DDB1C4264FB00F60875 /* GameCore.m */; settings = {ASSET_TAGS = (); }; };
-		551A3DDF1C4265C000F60875 /* NS2048Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 551A3DDE1C4265C000F60875 /* NS2048Object.m */; settings = {ASSET_TAGS = (); }; };
-		551A3DE31C42664800F60875 /* UI2048View.m in Sources */ = {isa = PBXBuildFile; fileRef = 551A3DE21C42664800F60875 /* UI2048View.m */; settings = {ASSET_TAGS = (); }; };
-		551A3DE61C42669B00F60875 /* UI2048Button.m in Sources */ = {isa = PBXBuildFile; fileRef = 551A3DE51C42669B00F60875 /* UI2048Button.m */; settings = {ASSET_TAGS = (); }; };
-		551A3DEA1C42676900F60875 /* GameColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 551A3DE91C42676900F60875 /* GameColor.m */; settings = {ASSET_TAGS = (); }; };
-		551A3DED1C42766A00F60875 /* GameTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 551A3DEC1C42766A00F60875 /* GameTools.m */; settings = {ASSET_TAGS = (); }; };
-		552C3E5B1C427CB000EE08D6 /* UI2048ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 552C3E5A1C427CB000EE08D6 /* UI2048ScoreView.m */; settings = {ASSET_TAGS = (); }; };
+		551A3DDC1C4264FB00F60875 /* GameCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 551A3DDB1C4264FB00F60875 /* GameCore.m */; };
+		551A3DDF1C4265C000F60875 /* NS2048Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 551A3DDE1C4265C000F60875 /* NS2048Object.m */; };
+		551A3DE31C42664800F60875 /* UI2048View.m in Sources */ = {isa = PBXBuildFile; fileRef = 551A3DE21C42664800F60875 /* UI2048View.m */; };
+		551A3DE61C42669B00F60875 /* UI2048Button.m in Sources */ = {isa = PBXBuildFile; fileRef = 551A3DE51C42669B00F60875 /* UI2048Button.m */; };
+		551A3DEA1C42676900F60875 /* GameColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 551A3DE91C42676900F60875 /* GameColor.m */; };
+		551A3DED1C42766A00F60875 /* GameTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 551A3DEC1C42766A00F60875 /* GameTools.m */; };
+		552C3E5B1C427CB000EE08D6 /* UI2048ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 552C3E5A1C427CB000EE08D6 /* UI2048ScoreView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -172,7 +172,7 @@
 		551A3DB71C42642300F60875 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Martell;
 				TargetAttributes = {
 					551A3DBE1C42642300F60875 = {
@@ -265,8 +265,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -308,8 +310,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
